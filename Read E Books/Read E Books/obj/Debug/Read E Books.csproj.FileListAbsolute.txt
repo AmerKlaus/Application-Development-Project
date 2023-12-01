@@ -1,0 +1,13 @@
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\Read E Books.exe.config
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\Read E Books.exe
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\Read E Books.pdb
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.AssemblyReference.cache
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Properties.Resources.resources
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.GenerateResource.cache
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.CoreCompileInputs.cache
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.exe
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.pdb
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.welcomeForm.resources
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\EbookDatabase.mdf
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\EbookDatabase_log.ldf
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Shop.resources
