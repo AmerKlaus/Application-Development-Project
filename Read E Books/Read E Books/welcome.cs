@@ -71,5 +71,13 @@ namespace Read_E_Books
             string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$";
             return Regex.IsMatch(password, pattern);
         }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            Form login = new Login();
+            login.Show();
+
+            this.Hide();
+        }
     }
 }
