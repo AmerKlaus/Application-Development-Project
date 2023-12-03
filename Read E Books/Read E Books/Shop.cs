@@ -118,5 +118,13 @@ namespace Read_E_Books
 
             return userId;
         }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            Form home = new Home();
+            home.Show();
+
+            this.Hide();
+        }
     }
 }

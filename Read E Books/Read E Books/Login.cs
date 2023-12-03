@@ -25,53 +25,93 @@ namespace Read_E_Books
             string username = loginUsernameTextBox.Text;
             string password = loginPasswordTextBox.Text;
 
-            // Validate username and password
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-            {
-                MessageBox.Show("Username and password are required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    string query = "SELECT Id FROM UserTable WHERE Username = @Username AND Password = @Password";
+                    string query = "SELECT UserId, Password FROM UserTable WHERE Username = @Username";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Username", username);
-                        command.Parameters.AddWithValue("@Password", password);
 
-                        object userIdObj = command.ExecuteScalar();
-
-                        if (userIdObj != null && userIdObj != DBNull.Value)
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            int userId = Convert.ToInt32(userIdObj);
+                            if (reader.Read())
+                            {
+                                string storedPassword = reader["Password"].ToString();
 
-                            MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                if (password.Equals(storedPassword))
+                                {
+                                    int userId = Convert.ToInt32(reader["UserId"]);
+                                    GlobalVariables.CurrentUsername = username;
+                                    GlobalVariables.CurrentPassword = password;
+                                    GlobalVariables.CurrentId = userId;
 
-                            Form home = new Home();
-                            home.Show();
-                            this.Hide();
-                        }
-                        else
-                        {
-                            // Invalid login
-                            MessageBox.Show("Invalid username or password. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            loginUsernameTextBox.Clear();
-                            loginPasswordTextBox.Clear();
-                            loginUsernameTextBox.Focus();
+                                    LoadHomePage();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Incorrect username or password");
+                                    loginUsernameTextBox.Text = "";
+                                    loginPasswordTextBox.Text = "";
+                                }
+                            }
+                            else
+                            {
+                                Console.Write("User not found");
+                            }
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error during login: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
+           
+        }
+
+        private void LoadHomePage()
+        {
+            Form home = new Home();
+            home.Show();
+
+            this.Hide();
+        }
+
+        private int GetIdByUsername(string username )
+        {
+            int id = 0;
+
+            try
+            {
+                using(SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "SELECT Id FROM UserTable WHERE Username = @Username";
+
+                    using (SqlCommand command = new SqlCommand(query,connection))
+                    {
+                        command.Parameters.AddWithValue("@Username", username);
+
+                        object result = command.ExecuteScalar();
+
+                        if(result != null && result != DBNull.Value)
+                        {
+                            id = Convert.ToInt32(result);
+                        }
+                    }
+                }
+            }catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting user ID: {ex.Message}");
+            }
+
+            return id;
         }
 
         private void backButton_Click(object sender, EventArgs e)

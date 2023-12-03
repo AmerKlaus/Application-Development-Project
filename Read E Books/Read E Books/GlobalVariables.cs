@@ -11,6 +11,10 @@ namespace Read_E_Books
         public static string CurrentUsername { get; set; }
 
         public static string CurrentPassword { get; set; }
+
+        public static int CurrentId { get; set; }
+
+        public static int CurrentBookId { get; set;}
     }
 
 }

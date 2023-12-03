@@ -32,12 +32,10 @@ namespace Read_E_Books
                 {
                     connection.Open();
 
-                    string query = "SELECT * FROM BookTable WHERE OwnerId = @UserId";
+                    string query = "SELECT * FROM CartTable";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@UserId", userId);
-
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
@@ -50,6 +48,27 @@ namespace Read_E_Books
             {
                 MessageBox.Show($"Error loading books: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            Form home = new Home();
+            home.Show();
+
+            this.Hide();
+        }
+
+        private void viewBookButton_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = libraryBooksGridView.SelectedRows[0];
+            int selectedBookId = (int)selectedRow.Cells["BookId"].Value;
+
+            GlobalVariables.CurrentBookId = selectedBookId;
+
+            Form bookReader = new BookReader();
+            bookReader.Show();
+
+            this.Hide();
         }
     }
 }
