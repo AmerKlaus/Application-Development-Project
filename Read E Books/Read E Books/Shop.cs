@@ -13,7 +13,7 @@ namespace Read_E_Books
 {
     public partial class Shop : Form
     {
-        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Amer-\\OneDrive\\Desktop\\Application-Development-Project\\Read E Books\\Read E Books\\EbookDatabase.mdf\";Integrated Security=True";
+        private string connectionString = GlobalVariables.Connection;
         private int selectedRowIndex = -1;
         public Shop()
         {
@@ -150,18 +150,6 @@ namespace Read_E_Books
             // TODO: This line of code loads data into the 'ebookDatabaseDataSet.Book' table. You can move, or remove it, as needed.
             this.bookTableAdapter.Fill(this.ebookDatabaseDataSet.Book);
             bookDataGridView.SelectionChanged += bookDataGridView_SelectionChanged;
-        }
-
-        private void bookDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.RowIndex < bookDataGridView.Rows.Count)
-            {
-                selectedRowIndex = e.RowIndex;
-            }
-            else
-            {
-                selectedRowIndex = -1; // No row is selected
-            }
         }
 
         private void bookDataGridView_SelectionChanged(object sender, EventArgs e)

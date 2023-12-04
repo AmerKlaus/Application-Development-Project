@@ -191,7 +191,7 @@
             this.bookDataGridView.Name = "bookDataGridView";
             this.bookDataGridView.Size = new System.Drawing.Size(555, 220);
             this.bookDataGridView.TabIndex = 10;
-            this.bookDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookDataGridView_CellClick);
+            //this.bookDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookDataGridView_CellClick);
             this.bookDataGridView.SelectionChanged += new System.EventHandler(this.bookDataGridView_SelectionChanged);
             // 
             // bookIdDataGridViewTextBoxColumn

@@ -13,14 +13,14 @@ namespace Read_E_Books
 {
     public partial class Library : Form
     {
-        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Amer-\\OneDrive\\Desktop\\Application-Development-Project\\Read E Books\\Read E Books\\EbookDatabase.mdf\";Integrated Security=True";
+        private string connectionString = GlobalVariables.Connection;
         private int userId = GlobalVariables.CurrentId;
         private int selectedRowIndex = -1;
 
         public Library()
         {
             InitializeComponent();
-
+            libraryBooksGridView.SelectionChanged += libraryBooksGridView_SelectionChanged;
             // Load books for the current user
             LoadBooks();
         }
@@ -29,11 +29,16 @@ namespace Read_E_Books
         {
             try
             {
+                // Retrieve books from the user's library using the userId
+                int userId = GlobalVariables.CurrentId;
+
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    string query = "SELECT * FROM Library WHERE userId = @UserId";
+                    string query = "SELECT Book.bookId, bookName, Genre, numberOfPages, Price FROM Library " +
+                                   "INNER JOIN Book ON Library.bookId = Book.bookId " +
+                                   "WHERE userId = @UserId";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -63,74 +68,62 @@ namespace Read_E_Books
 
         private void viewBookButton_Click(object sender, EventArgs e)
         {
-            if (selectedRowIndex >= 0 && selectedRowIndex < libraryBooksGridView.Rows.Count)
+            if (libraryBooksGridView.SelectedRows.Count > 0)
             {
-                DataGridViewRow selectedRow = libraryBooksGridView.Rows[selectedRowIndex];
+                // Get the selected book's content from the Book table
+                DataGridViewRow selectedRow = libraryBooksGridView.SelectedRows[0];
+                int selectedBookId = (int)selectedRow.Cells["bookId"].Value;
 
-                // Check if the selectedRow is not null
-                if (selectedRow != null)
+                string content = GetBookContent(selectedBookId);
+
+                // Open the BookReader form to display the content
+                Form bookReader = new BookReader(content);
+                bookReader.Show();
+                this.Hide();
+            }
+        }
+
+        private string GetBookContent(int bookId)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    // Create a list to store cell values
-                    List<object> rowValues = new List<object>();
+                    connection.Open();
 
-                    // Loop through the cells in the selected row
-                    foreach (DataGridViewCell cell in selectedRow.Cells)
+                    string query = "SELECT Content FROM Book WHERE bookId = @BookId";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        rowValues.Add(cell.Value);
-                    }
+                        command.Parameters.AddWithValue("@BookId", bookId);
 
-                    // rowValues contains the values of all cells in the selected row
-                    int selectedBookId = (int)rowValues[0];
+                        object result = command.ExecuteScalar();
 
-                    try
-                    {
-                        using (SqlConnection connection = new SqlConnection(connectionString))
+                        if (result != null && result != DBNull.Value)
                         {
-                            connection.Open();
-
-                            string query = "SELECT Content FROM Library WHERE bookId = @BookId";
-
-                            using (SqlCommand command = new SqlCommand(query, connection))
-                            {
-                                command.Parameters.AddWithValue("@BookId", selectedBookId);
-
-                                command.ExecuteNonQuery();
-
-                                string content = libraryBooksGridView.Rows[selectedBookId].Cells["Content"].Value.ToString();
-
-                                Form bookReader = new BookReader(content);
-                                bookReader.Show();
-
-                                this.Close();
-
-                                MessageBox.Show("Book Content loaded successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
+                            return result.ToString();
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error loading book content: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
                 }
-                else
-                {
-                    MessageBox.Show("The selected row is null.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error getting book content: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return null;
+        }
+
+        private void libraryBooksGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (libraryBooksGridView.SelectedRows.Count > 0)
+            {
+                viewBookButton.Enabled = libraryBooksGridView.SelectedRows.Count > 0;
             }
             else
             {
-                MessageBox.Show("Please select a valid book to view content.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                selectedRowIndex = -1; // No row is selected
             }
-
-            //DataGridViewRow selectedRow = libraryBooksGridView.SelectedRows[0];
-            //int selectedBookId = (int)selectedRow.Cells["bookId"].Value;
-
-            //GlobalVariables.CurrentBookId = selectedBookId;
-
-            //Form bookReader = new BookReader();
-            //bookReader.Show();
-
-            //this.Close();
         }
     }
 }

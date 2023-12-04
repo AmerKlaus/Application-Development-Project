@@ -14,7 +14,7 @@ namespace Read_E_Books
 {
     public partial class welcomeForm : Form
     {
-        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Amer-\\OneDrive\\Desktop\\Application-Development-Project\\Read E Books\\Read E Books\\EbookDatabase.mdf\";Integrated Security=True";
+        private string connectionString = GlobalVariables.Connection;
         public welcomeForm()
         {
             InitializeComponent();

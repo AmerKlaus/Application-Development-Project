@@ -8,7 +8,18 @@ namespace Read_E_Books
 {
     public static class GlobalVariables
     {
-        public static string connection {  get; set; }
+        static string connection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\2205182\\Desktop\\Application-Development-Project\\Read E Books\\Read E Books\\EbookDatabase.mdf\";Integrated Security=True";
+        public static string Connection
+        {
+            get
+            {
+                return connection;
+            }
+            set
+            {
+                connection = value;
+            }
+        }
         public static string CurrentUsername { get; set; }
 
         public static string CurrentPassword { get; set; }

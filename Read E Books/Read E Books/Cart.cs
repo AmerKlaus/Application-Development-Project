@@ -13,7 +13,7 @@ namespace Read_E_Books
 {
     public partial class Cart : Form
     {
-        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Amer-\\OneDrive\\Desktop\\Application-Development-Project\\Read E Books\\Read E Books\\EbookDatabase.mdf\";Integrated Security=True";
+        private string connectionString = GlobalVariables.Connection;
 
         private List<CartItem> cartItems = new List<CartItem>();
         private int userId = GlobalVariables.CurrentId;
