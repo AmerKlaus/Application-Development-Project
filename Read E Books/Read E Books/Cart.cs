@@ -96,7 +96,7 @@ namespace Read_E_Books
 
         private void confirmPurchaseButton_Click(object sender, EventArgs e)
         {
-            if (nameTextBox != null && addressTextBox != null && cardTextBox != null)
+            if (nameTextBox.Text != null && addressTextBox.Text != null && cardTextBox.Text != null)
             {
                 try
                 {
@@ -146,6 +146,9 @@ namespace Read_E_Books
                                 }
                             }
 
+                            cartListBox.Items.Clear();
+                            DisplayCartItems();
+
                             // Clear the cart after adding items to the library
                             string clearCartQuery = "DELETE FROM Cart WHERE userId = @UserId";
 
@@ -157,9 +160,6 @@ namespace Read_E_Books
 
                             Library libraryForm = new Library();
                             libraryForm.LoadBooks();
-
-                            cartListBox.Items.Clear();
-                            DisplayCartItems();
                         }
                     }
 

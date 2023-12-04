@@ -36,12 +36,12 @@
             this.totalCostLabel = new System.Windows.Forms.Label();
             this.cartListBox = new System.Windows.Forms.ListBox();
             this.paymentGroupBox = new System.Windows.Forms.GroupBox();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.addressLabel = new System.Windows.Forms.Label();
-            this.cardLabel = new System.Windows.Forms.Label();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.addressTextBox = new System.Windows.Forms.TextBox();
             this.cardTextBox = new System.Windows.Forms.TextBox();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.cardLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.paymentGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,7 +89,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(624, 352);
+            this.label1.Location = new System.Drawing.Point(591, 351);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 8;
@@ -98,9 +98,9 @@
             // totalCostLabel
             // 
             this.totalCostLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.totalCostLabel.Location = new System.Drawing.Point(688, 342);
+            this.totalCostLabel.Location = new System.Drawing.Point(655, 341);
             this.totalCostLabel.Name = "totalCostLabel";
-            this.totalCostLabel.Size = new System.Drawing.Size(100, 23);
+            this.totalCostLabel.Size = new System.Drawing.Size(133, 23);
             this.totalCostLabel.TabIndex = 9;
             // 
             // cartListBox
@@ -127,23 +127,26 @@
             this.paymentGroupBox.TabStop = false;
             this.paymentGroupBox.Text = "Payment Information";
             // 
-            // nameLabel
+            // cardTextBox
             // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(6, 39);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(41, 13);
-            this.nameLabel.TabIndex = 12;
-            this.nameLabel.Text = "Name :";
+            this.cardTextBox.Location = new System.Drawing.Point(95, 98);
+            this.cardTextBox.Name = "cardTextBox";
+            this.cardTextBox.Size = new System.Drawing.Size(145, 20);
+            this.cardTextBox.TabIndex = 17;
             // 
-            // addressLabel
+            // addressTextBox
             // 
-            this.addressLabel.AutoSize = true;
-            this.addressLabel.Location = new System.Drawing.Point(6, 72);
-            this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(81, 13);
-            this.addressLabel.TabIndex = 13;
-            this.addressLabel.Text = "Billing Address :";
+            this.addressTextBox.Location = new System.Drawing.Point(95, 65);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(145, 20);
+            this.addressTextBox.TabIndex = 16;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(95, 36);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(145, 20);
+            this.nameTextBox.TabIndex = 15;
             // 
             // cardLabel
             // 
@@ -154,26 +157,23 @@
             this.cardLabel.TabIndex = 14;
             this.cardLabel.Text = "Card Number :";
             // 
-            // nameTextBox
+            // addressLabel
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(95, 36);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(145, 20);
-            this.nameTextBox.TabIndex = 15;
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Location = new System.Drawing.Point(6, 72);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(81, 13);
+            this.addressLabel.TabIndex = 13;
+            this.addressLabel.Text = "Billing Address :";
             // 
-            // addressTextBox
+            // nameLabel
             // 
-            this.addressTextBox.Location = new System.Drawing.Point(95, 65);
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(145, 20);
-            this.addressTextBox.TabIndex = 16;
-            // 
-            // cardTextBox
-            // 
-            this.cardTextBox.Location = new System.Drawing.Point(95, 98);
-            this.cardTextBox.Name = "cardTextBox";
-            this.cardTextBox.Size = new System.Drawing.Size(145, 20);
-            this.cardTextBox.TabIndex = 17;
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(6, 39);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(41, 13);
+            this.nameLabel.TabIndex = 12;
+            this.nameLabel.Text = "Name :";
             // 
             // Cart
             // 

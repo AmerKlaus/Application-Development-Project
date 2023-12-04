@@ -14,7 +14,7 @@ namespace Read_E_Books
     public partial class Shop : Form
     {
         private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Amer-\\OneDrive\\Desktop\\Application-Development-Project\\Read E Books\\Read E Books\\EbookDatabase.mdf\";Integrated Security=True";
-
+        private int selectedRowIndex = -1;
         public Shop()
         {
             InitializeComponent();
@@ -39,13 +39,24 @@ namespace Read_E_Books
 
         private void addCartButton_Click(object sender, EventArgs e)
         {
-            if (bookDataGridView.SelectedRows.Count > 0)
+            if (selectedRowIndex >= 0 && selectedRowIndex < bookDataGridView.Rows.Count)
             {
-                DataGridViewRow selectedRow = bookDataGridView.SelectedRows[0];
+                DataGridViewRow selectedRow = bookDataGridView.Rows[selectedRowIndex];
 
-                if (selectedRow.Index >= 0 && selectedRow.Index < bookDataGridView.Rows.Count)
+                // Check if the selectedRow is not null
+                if (selectedRow != null)
                 {
-                    int selectedBookId = (int)selectedRow.Cells["bookId"].Value;
+                    // Create a list to store cell values
+                    List<object> rowValues = new List<object>();
+
+                    // Loop through the cells in the selected row
+                    foreach (DataGridViewCell cell in selectedRow.Cells)
+                    {
+                        rowValues.Add(cell.Value);
+                    }
+
+                    // rowValues contains the values of all cells in the selected row
+                    int selectedBookId = (int)rowValues[0];
 
                     string loggedInUsername = GlobalVariables.CurrentUsername;
                     int userId = GetUserIdByUsername(loggedInUsername);
@@ -76,12 +87,12 @@ namespace Read_E_Books
                 }
                 else
                 {
-                    MessageBox.Show("Invalid selected row index.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The selected row is null.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Please select a book to add to the cart.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a valid book to add to the cart.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -138,6 +149,31 @@ namespace Read_E_Books
         {
             // TODO: This line of code loads data into the 'ebookDatabaseDataSet.Book' table. You can move, or remove it, as needed.
             this.bookTableAdapter.Fill(this.ebookDatabaseDataSet.Book);
+            bookDataGridView.SelectionChanged += bookDataGridView_SelectionChanged;
+        }
+
+        private void bookDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < bookDataGridView.Rows.Count)
+            {
+                selectedRowIndex = e.RowIndex;
+            }
+            else
+            {
+                selectedRowIndex = -1; // No row is selected
+            }
+        }
+
+        private void bookDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (bookDataGridView.SelectedRows.Count > 0)
+            {
+                selectedRowIndex = bookDataGridView.SelectedRows[0].Index;
+            }
+            else
+            {
+                selectedRowIndex = -1; // No row is selected
+            }
         }
     }
 }

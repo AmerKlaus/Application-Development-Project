@@ -38,7 +38,7 @@ namespace Read_E_Books
                     connection.Open();
 
 
-                    string query = "SELECT Id, Password FROM Book WHERE Id = @CurrentBookId";
+                    string query = "SELECT bookId FROM Book WHERE bookId = @CurrentBookId";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
