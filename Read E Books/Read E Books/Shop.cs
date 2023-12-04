@@ -126,5 +126,13 @@ namespace Read_E_Books
 
             this.Hide();
         }
+
+        private void cartButton_Click(object sender, EventArgs e)
+        {
+            Form cart = new Cart();
+            cart.Show();
+
+            this.Hide();
+        }
     }
 }
