@@ -39,35 +39,49 @@ namespace Read_E_Books
 
         private void addCartButton_Click(object sender, EventArgs e)
         {
-            // Get the selected book from the DataGridView
-            DataGridViewRow selectedRow = bookDataGridView.SelectedRows[0];
-            int selectedBookId = (int)selectedRow.Cells["bookId"].Value;
-
-            string loggedInUsername = GlobalVariables.CurrentUsername;
-            int userId = GetUserIdByUsername(loggedInUsername);
-
-            try
+            if (bookDataGridView.SelectedRows.Count > 0)
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                DataGridViewRow selectedRow = bookDataGridView.SelectedRows[0];
+
+                if (selectedRow.Index >= 0 && selectedRow.Index < bookDataGridView.Rows.Count)
                 {
-                    connection.Open();
+                    int selectedBookId = (int)selectedRow.Cells["bookId"].Value;
 
-                    string query = "INSERT INTO Cart (userId, bookId) VALUES (@UserId, @BookId)";
+                    string loggedInUsername = GlobalVariables.CurrentUsername;
+                    int userId = GetUserIdByUsername(loggedInUsername);
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    try
                     {
-                        command.Parameters.AddWithValue("@UserId", userId);
-                        command.Parameters.AddWithValue("@BookId", selectedBookId);
+                        using (SqlConnection connection = new SqlConnection(connectionString))
+                        {
+                            connection.Open();
 
-                        command.ExecuteNonQuery();
+                            string query = "INSERT INTO Cart (userId, bookId) VALUES (@UserId, @BookId)";
 
-                        MessageBox.Show("Book added to cart successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            using (SqlCommand command = new SqlCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@UserId", userId);
+                                command.Parameters.AddWithValue("@BookId", selectedBookId);
+
+                                command.ExecuteNonQuery();
+
+                                MessageBox.Show("Book added to cart successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error adding book to cart: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Invalid selected row index.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Error adding book to cart: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a book to add to the cart.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -124,7 +138,6 @@ namespace Read_E_Books
         {
             // TODO: This line of code loads data into the 'ebookDatabaseDataSet.Book' table. You can move, or remove it, as needed.
             this.bookTableAdapter.Fill(this.ebookDatabaseDataSet.Book);
-
         }
     }
 }
