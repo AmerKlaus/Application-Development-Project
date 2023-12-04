@@ -33,6 +33,7 @@
             this.homeButton = new System.Windows.Forms.Button();
             this.listLabel = new System.Windows.Forms.Label();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ebookDatabaseDataSet = new Read_E_Books.EbookDatabaseDataSet();
             this.searchGroupBox = new System.Windows.Forms.GroupBox();
             this.searchGenreButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.showAllButton = new System.Windows.Forms.Button();
             this.cartButton = new System.Windows.Forms.Button();
             this.addCartButton = new System.Windows.Forms.Button();
-            this.ebookDatabaseDataSet = new Read_E_Books.EbookDatabaseDataSet();
             this.bookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bookTableAdapter = new Read_E_Books.EbookDatabaseDataSetTableAdapters.BookTableAdapter();
             this.tableAdapterManager = new Read_E_Books.EbookDatabaseDataSetTableAdapters.TableAdapterManager();
@@ -51,8 +51,8 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
-            this.searchGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ebookDatabaseDataSet)).BeginInit();
+            this.searchGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -92,6 +92,11 @@
             // 
             this.bookBindingSource.DataMember = "Book";
             this.bookBindingSource.DataSource = this.ebookDatabaseDataSet;
+            // 
+            // ebookDatabaseDataSet
+            // 
+            this.ebookDatabaseDataSet.DataSetName = "EbookDatabaseDataSet";
+            this.ebookDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // searchGroupBox
             // 
@@ -162,15 +167,11 @@
             this.addCartButton.UseVisualStyleBackColor = true;
             this.addCartButton.Click += new System.EventHandler(this.addCartButton_Click);
             // 
-            // ebookDatabaseDataSet
-            // 
-            this.ebookDatabaseDataSet.DataSetName = "EbookDatabaseDataSet";
-            this.ebookDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // bookBindingSource1
             // 
+            this.bookBindingSource1.AllowNew = true;
+            this.bookBindingSource1.DataMember = "Book";
             this.bookBindingSource1.DataSource = this.ebookDatabaseDataSet;
-            this.bookBindingSource1.Position = 0;
             // 
             // bookTableAdapter
             // 
@@ -185,6 +186,7 @@
             // bookDataGridView
             // 
             this.bookDataGridView.AutoGenerateColumns = false;
+            this.bookDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -204,30 +206,35 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "bookId";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 65;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "bookName";
             this.dataGridViewTextBoxColumn2.HeaderText = "bookName";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 84;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Genre";
             this.dataGridViewTextBoxColumn3.HeaderText = "Genre";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 61;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "numberOfPages";
             this.dataGridViewTextBoxColumn4.HeaderText = "numberOfPages";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 108;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Price";
             this.dataGridViewTextBoxColumn5.HeaderText = "Price";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 56;
             // 
             // Shop
             // 
@@ -246,9 +253,9 @@
             this.Text = "Shop";
             this.Load += new System.EventHandler(this.Shop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ebookDatabaseDataSet)).EndInit();
             this.searchGroupBox.ResumeLayout(false);
             this.searchGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ebookDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).EndInit();
             this.ResumeLayout(false);

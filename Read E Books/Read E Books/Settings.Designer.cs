@@ -107,7 +107,6 @@
             this.accountLabel.Name = "accountLabel";
             this.accountLabel.Size = new System.Drawing.Size(336, 368);
             this.accountLabel.TabIndex = 8;
-            this.accountLabel.Text = "accountLabel\r\n";
             this.accountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Settings
@@ -123,7 +122,7 @@
             this.Controls.Add(this.changePasswordButton);
             this.Controls.Add(this.changeUsernameButton);
             this.Controls.Add(this.accountLabel);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Settings";
             this.Text = "Settings";
             this.ResumeLayout(false);
