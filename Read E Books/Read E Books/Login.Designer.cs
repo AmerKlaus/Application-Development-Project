@@ -39,32 +39,29 @@
             // loginUsernameTextBox
             // 
             this.loginUsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.loginUsernameTextBox.Location = new System.Drawing.Point(659, 288);
-            this.loginUsernameTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.loginUsernameTextBox.Location = new System.Drawing.Point(247, 121);
             this.loginUsernameTextBox.MaxLength = 25;
             this.loginUsernameTextBox.Name = "loginUsernameTextBox";
-            this.loginUsernameTextBox.Size = new System.Drawing.Size(311, 38);
+            this.loginUsernameTextBox.Size = new System.Drawing.Size(118, 20);
             this.loginUsernameTextBox.TabIndex = 11;
             // 
             // loginPasswordTextBox
             // 
             this.loginPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.loginPasswordTextBox.Location = new System.Drawing.Point(659, 415);
-            this.loginPasswordTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.loginPasswordTextBox.Location = new System.Drawing.Point(247, 174);
             this.loginPasswordTextBox.MaxLength = 25;
             this.loginPasswordTextBox.Name = "loginPasswordTextBox";
             this.loginPasswordTextBox.PasswordChar = '*';
-            this.loginPasswordTextBox.Size = new System.Drawing.Size(311, 38);
+            this.loginPasswordTextBox.Size = new System.Drawing.Size(118, 20);
             this.loginPasswordTextBox.TabIndex = 10;
             // 
             // userLabel
             // 
             this.userLabel.AutoSize = true;
             this.userLabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userLabel.Location = new System.Drawing.Point(315, 288);
-            this.userLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.userLabel.Location = new System.Drawing.Point(118, 121);
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(309, 40);
+            this.userLabel.Size = new System.Drawing.Size(123, 16);
             this.userLabel.TabIndex = 9;
             this.userLabel.Text = "Enter your username :";
             // 
@@ -72,18 +69,18 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(315, 415);
-            this.passwordLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.passwordLabel.Location = new System.Drawing.Point(118, 174);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(308, 40);
+            this.passwordLabel.Size = new System.Drawing.Size(123, 16);
             this.passwordLabel.TabIndex = 8;
             this.passwordLabel.Text = "Enter your password :";
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(13, 13);
+            this.backButton.Location = new System.Drawing.Point(5, 5);
+            this.backButton.Margin = new System.Windows.Forms.Padding(1);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(190, 78);
+            this.backButton.Size = new System.Drawing.Size(71, 33);
             this.backButton.TabIndex = 12;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
@@ -91,24 +88,26 @@
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(1078, 744);
+            this.loginButton.Location = new System.Drawing.Point(404, 314);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(190, 78);
-            this.loginButton.TabIndex = 13;
+            this.loginButton.Size = new System.Drawing.Size(74, 33);
+            this.loginButton.TabIndex = 14;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1306, 855);
+            this.ClientSize = new System.Drawing.Size(490, 359);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.loginUsernameTextBox);
             this.Controls.Add(this.loginPasswordTextBox);
             this.Controls.Add(this.userLabel);
             this.Controls.Add(this.passwordLabel);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);

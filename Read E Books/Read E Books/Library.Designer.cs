@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.libraryBooksGridView = new System.Windows.Forms.DataGridView();
             this.ebookBookDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ebookBookDataSet = new Read_E_Books.EbookBookDataSet();
+            //this.ebookBookDataSet = new Read_E_Books.EbookBookDataSet();
             this.viewBookButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.libraryBooksGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ebookBookDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ebookBookDataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.ebookBookDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // libraryBooksGridView
@@ -51,13 +51,13 @@
             // 
             // ebookBookDataSetBindingSource
             // 
-            this.ebookBookDataSetBindingSource.DataSource = this.ebookBookDataSet;
+            //this.ebookBookDataSetBindingSource.DataSource = this.ebookBookDataSet;
             this.ebookBookDataSetBindingSource.Position = 0;
             // 
             // ebookBookDataSet
             // 
-            this.ebookBookDataSet.DataSetName = "EbookBookDataSet";
-            this.ebookBookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.ebookBookDataSet.DataSetName = "EbookBookDataSet";
+            //this.ebookBookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // viewBookButton
             // 
@@ -91,7 +91,7 @@
             this.Text = "Library";
             ((System.ComponentModel.ISupportInitialize)(this.libraryBooksGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ebookBookDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ebookBookDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.ebookBookDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -100,7 +100,7 @@
 
         private System.Windows.Forms.DataGridView libraryBooksGridView;
         private System.Windows.Forms.BindingSource ebookBookDataSetBindingSource;
-        private EbookBookDataSet ebookBookDataSet;
+        //private EbookBookDataSet ebookBookDataSet;
         private System.Windows.Forms.Button viewBookButton;
         private System.Windows.Forms.Button homeButton;
     }

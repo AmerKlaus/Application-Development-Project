@@ -32,13 +32,7 @@
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.homeButton = new System.Windows.Forms.Button();
             this.listLabel = new System.Windows.Forms.Label();
-            this.bookDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ebookBookDataSet = new Read_E_Books.EbookBookDataSet();
             this.searchGroupBox = new System.Windows.Forms.GroupBox();
             this.searchGenreButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
@@ -46,12 +40,21 @@
             this.showAllButton = new System.Windows.Forms.Button();
             this.cartButton = new System.Windows.Forms.Button();
             this.addCartButton = new System.Windows.Forms.Button();
-            this.bookTableAdapter = new Read_E_Books.EbookBookDataSetTableAdapters.BookTableAdapter();
-            this.tableAdapterManager = new Read_E_Books.EbookBookDataSetTableAdapters.TableAdapterManager();
-            ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).BeginInit();
+            this.ebookDatabaseDataSet = new Read_E_Books.EbookDatabaseDataSet();
+            this.bookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bookTableAdapter = new Read_E_Books.EbookDatabaseDataSetTableAdapters.BookTableAdapter();
+            this.tableAdapterManager = new Read_E_Books.EbookDatabaseDataSetTableAdapters.TableAdapterManager();
+            this.bookDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ebookBookDataSet)).BeginInit();
             this.searchGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ebookDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // welcomeLabel
@@ -85,64 +88,10 @@
             this.listLabel.TabIndex = 6;
             this.listLabel.Text = "List of Books :";
             // 
-            // bookDataGridView
-            // 
-            this.bookDataGridView.AutoGenerateColumns = false;
-            this.bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.bookDataGridView.DataSource = this.bookBindingSource;
-            this.bookDataGridView.Location = new System.Drawing.Point(12, 102);
-            this.bookDataGridView.Name = "bookDataGridView";
-            this.bookDataGridView.RowHeadersWidth = 102;
-            this.bookDataGridView.Size = new System.Drawing.Size(449, 220);
-            this.bookDataGridView.TabIndex = 7;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 12;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "bookName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "bookName";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 12;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Genre";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Genre";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 12;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "numberOfPages";
-            this.dataGridViewTextBoxColumn4.HeaderText = "numberOfPages";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 12;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 250;
-            // 
             // bookBindingSource
             // 
             this.bookBindingSource.DataMember = "Book";
-            this.bookBindingSource.DataSource = this.ebookBookDataSet;
-            // 
-            // ebookBookDataSet
-            // 
-            this.ebookBookDataSet.DataSetName = "EbookBookDataSet";
-            this.ebookBookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bookBindingSource.DataSource = this.ebookDatabaseDataSet;
             // 
             // searchGroupBox
             // 
@@ -213,6 +162,16 @@
             this.addCartButton.UseVisualStyleBackColor = true;
             this.addCartButton.Click += new System.EventHandler(this.addCartButton_Click);
             // 
+            // ebookDatabaseDataSet
+            // 
+            this.ebookDatabaseDataSet.DataSetName = "EbookDatabaseDataSet";
+            this.ebookDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bookBindingSource1
+            // 
+            this.bookBindingSource1.DataSource = this.ebookDatabaseDataSet;
+            this.bookBindingSource1.Position = 0;
+            // 
             // bookTableAdapter
             // 
             this.bookTableAdapter.ClearBeforeFill = true;
@@ -221,29 +180,77 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BookTableAdapter = this.bookTableAdapter;
-            this.tableAdapterManager.UpdateOrder = Read_E_Books.EbookBookDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = Read_E_Books.EbookDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // bookDataGridView
+            // 
+            this.bookDataGridView.AutoGenerateColumns = false;
+            this.bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.bookDataGridView.DataSource = this.bookBindingSource;
+            this.bookDataGridView.Location = new System.Drawing.Point(15, 102);
+            this.bookDataGridView.Name = "bookDataGridView";
+            this.bookDataGridView.Size = new System.Drawing.Size(555, 220);
+            this.bookDataGridView.TabIndex = 10;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "bookId";
+            this.dataGridViewTextBoxColumn1.HeaderText = "bookId";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "bookName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "bookName";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Genre";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Genre";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "numberOfPages";
+            this.dataGridViewTextBoxColumn4.HeaderText = "numberOfPages";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Price";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Price";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // Shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 513);
+            this.ClientSize = new System.Drawing.Size(610, 521);
+            this.Controls.Add(this.bookDataGridView);
             this.Controls.Add(this.addCartButton);
             this.Controls.Add(this.cartButton);
             this.Controls.Add(this.showAllButton);
             this.Controls.Add(this.searchGroupBox);
-            this.Controls.Add(this.bookDataGridView);
             this.Controls.Add(this.listLabel);
             this.Controls.Add(this.homeButton);
             this.Controls.Add(this.welcomeLabel);
             this.Name = "Shop";
             this.Text = "Shop";
             this.Load += new System.EventHandler(this.Shop_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ebookBookDataSet)).EndInit();
             this.searchGroupBox.ResumeLayout(false);
             this.searchGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ebookDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,15 +261,10 @@
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Label listLabel;
-        private EbookBookDataSet ebookBookDataSet;
+        //private EbookBookDataSet ebookBookDataSet;
         private System.Windows.Forms.BindingSource bookBindingSource;
-        private EbookBookDataSetTableAdapters.BookTableAdapter bookTableAdapter;
-        private EbookBookDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView bookDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        //private EbookBookDataSetTableAdapters.BookTableAdapter bookTableAdapter;
+        //private EbookBookDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.GroupBox searchGroupBox;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.TextBox searchTextBox;
@@ -270,5 +272,15 @@
         private System.Windows.Forms.Button searchGenreButton;
         private System.Windows.Forms.Button cartButton;
         private System.Windows.Forms.Button addCartButton;
+        private EbookDatabaseDataSet ebookDatabaseDataSet;
+        private System.Windows.Forms.BindingSource bookBindingSource1;
+        private EbookDatabaseDataSetTableAdapters.BookTableAdapter bookTableAdapter;
+        private EbookDatabaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView bookDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }

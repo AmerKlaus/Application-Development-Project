@@ -61,9 +61,9 @@ namespace Read_E_Books
                     connection.Open();
 
 
-                    string query = "SELECT b.bookName FROM BookTable b " +
-                                   "INNER JOIN Library l ON b.BookId = l.BookId " +
-                                   "INNER JOIN UserTable u ON l.UserId = u.UserId " +
+                    string query = "SELECT b.bookName FROM Book b " +
+                                   "INNER JOIN Library l ON b.bookId = l.bookId " +
+                                   "INNER JOIN UserTable u ON l.userId = u.userId " +
                                    "WHERE u.Username = @Username";
 
                     using (SqlCommand command = new SqlCommand(query, connection))

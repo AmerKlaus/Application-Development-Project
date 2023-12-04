@@ -20,36 +20,21 @@ namespace Read_E_Books
             InitializeComponent();
         }
 
-        private void bookBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.bookBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.ebookBookDataSet);
-
-        }
-
-        private void Shop_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'ebookBookDataSet.Book' table. You can move, or remove it, as needed.
-            this.bookTableAdapter.Fill(this.ebookBookDataSet.Book);
-
-        }
-
         private void searchButton_Click(object sender, EventArgs e)
         {
             this.bookTableAdapter.SearchName(
-                this.ebookBookDataSet.Book, searchTextBox.Text);
+                this.ebookDatabaseDataSet.Book, searchTextBox.Text);
         }
 
         private void showAllButton_Click(object sender, EventArgs e)
         {
-            this.bookTableAdapter.Fill(this.ebookBookDataSet.Book);
+            this.bookTableAdapter.Fill(this.ebookDatabaseDataSet.Book);
         }
 
         private void searchGenreButton_Click(object sender, EventArgs e)
         {
             this.bookTableAdapter.SearchGenre(
-                this.ebookBookDataSet.Book, searchTextBox.Text);
+                this.ebookDatabaseDataSet.Book, searchTextBox.Text);
         }
 
         private void addCartButton_Click(object sender, EventArgs e)
@@ -133,6 +118,13 @@ namespace Read_E_Books
             cart.Show();
 
             this.Close();
+        }
+
+        private void Shop_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'ebookDatabaseDataSet.Book' table. You can move, or remove it, as needed.
+            this.bookTableAdapter.Fill(this.ebookDatabaseDataSet.Book);
+
         }
     }
 }

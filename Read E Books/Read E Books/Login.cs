@@ -18,6 +18,23 @@ namespace Read_E_Books
         public Login()
         {
             InitializeComponent();
+            loginButton.Click += loginButton_Click;
+        }
+
+        private void LoadHomePage()
+        {
+            Form home = new Home();
+            home.Show();
+
+            this.Close();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Form welcome = new welcomeForm();
+            welcome.Show();
+
+            this.Close();
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -61,7 +78,7 @@ namespace Read_E_Books
                             }
                             else
                             {
-                                Console.Write("User not found");
+                                MessageBox.Show("User not found");
                             }
                         }
                     }
@@ -71,23 +88,6 @@ namespace Read_E_Books
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
-           
-        }
-
-        private void LoadHomePage()
-        {
-            Form home = new Home();
-            home.Show();
-
-            this.Close();
-        }
-
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            Form welcome = new welcomeForm();
-            welcome.Show();
-
-            this.Close();
         }
     }
 }

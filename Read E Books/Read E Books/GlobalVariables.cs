@@ -8,6 +8,7 @@ namespace Read_E_Books
 {
     public static class GlobalVariables
     {
+        public static string connection {  get; set; }
         public static string CurrentUsername { get; set; }
 
         public static string CurrentPassword { get; set; }

@@ -75,10 +75,10 @@
     <Compile Include="Cart.Designer.cs">
       <DependentUpon>Cart.cs</DependentUpon>
     </Compile>
-    <Compile Include="EbookBookDataSet.Designer.cs">
+    <Compile Include="EbookDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EbookBookDataSet.xsd</DependentUpon>
+      <DependentUpon>EbookDatabaseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="EbookUserDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -157,16 +157,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="EbookBookDataSet.xsc">
-      <DependentUpon>EbookBookDataSet.xsd</DependentUpon>
+    <None Include="EbookDatabaseDataSet.xsc">
+      <DependentUpon>EbookDatabaseDataSet.xsd</DependentUpon>
     </None>
-    <None Include="EbookBookDataSet.xsd">
+    <None Include="EbookDatabaseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EbookBookDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>EbookDatabaseDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="EbookBookDataSet.xss">
-      <DependentUpon>EbookBookDataSet.xsd</DependentUpon>
+    <None Include="EbookDatabaseDataSet.xss">
+      <DependentUpon>EbookDatabaseDataSet.xsd</DependentUpon>
     </None>
     <None Include="EbookUserDataSet.xsc">
       <DependentUpon>EbookUserDataSet.xsd</DependentUpon>
