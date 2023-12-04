@@ -60,7 +60,7 @@
             this.Controls.Add(this.libraryButton);
             this.Name = "BookReader";
             this.Text = "BookReader";
-            this.Load += new System.EventHandler(this.BookReader_Load);
+            //this.Load += new System.EventHandler(this.BookReader_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

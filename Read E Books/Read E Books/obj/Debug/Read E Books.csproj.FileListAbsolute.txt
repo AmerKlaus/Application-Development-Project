@@ -32,3 +32,7 @@ C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Rea
 C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.CoreCompileInputs.cache
 C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.exe
 C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.pdb
+D:\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.BookReader.resources
+D:\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Cart.resources
+D:\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Home.resources
+D:\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Settings.resources

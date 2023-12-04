@@ -21,6 +21,12 @@ namespace Read_E_Books
             InitializeComponent();
         }
 
+        public BookReader(string content)
+        {
+            bookContentTextBox.Text = content;
+            InitializeComponent();
+        }
+
         private void libraryButton_Click(object sender, EventArgs e)
         {
             Form library = new Library();
@@ -29,36 +35,36 @@ namespace Read_E_Books
             this.Close();
         }
 
-        private void BookReader_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
+        //private void BookReader_Load(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        using (SqlConnection connection = new SqlConnection(connectionString))
+        //        {
+        //            connection.Open();
 
 
-                    string query = "SELECT bookId FROM Book WHERE bookId = @CurrentBookId";
+        //            string query = "SELECT bookId FROM Book WHERE bookId = @CurrentBookId";
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@CurrentBookId", GlobalVariables.CurrentBookId);
+        //            using (SqlCommand command = new SqlCommand(query, connection))
+        //            {
+        //                command.Parameters.AddWithValue("@CurrentBookId", GlobalVariables.CurrentBookId);
 
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                string bookContent = reader["Content"].ToString();
-                                bookContentTextBox.Text = bookContent;
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading content: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //                using (SqlDataReader reader = command.ExecuteReader())
+        //                {
+        //                    if (reader.Read())
+        //                    {
+        //                        string bookContent = reader["Content"].ToString();
+        //                        bookContentTextBox.Text = bookContent;
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Error loading content: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
     }
 }
