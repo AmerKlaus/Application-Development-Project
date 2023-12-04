@@ -26,7 +26,7 @@ namespace Read_E_Books
             Form library = new Library();
             library.Show();
 
-            this.Hide();
+            this.Close();
         }
 
         private void BookReader_Load(object sender, EventArgs e)

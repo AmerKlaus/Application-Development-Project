@@ -31,7 +31,7 @@ namespace Read_E_Books
                 {
                     connection.Open();
 
-                    string query = "SELECT UserId, Password FROM UserTable WHERE Username = @Username";
+                    string query = "SELECT userId, Password FROM UserTable WHERE Username = @Username";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -79,39 +79,7 @@ namespace Read_E_Books
             Form home = new Home();
             home.Show();
 
-            this.Hide();
-        }
-
-        private int GetIdByUsername(string username )
-        {
-            int id = 0;
-
-            try
-            {
-                using(SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-
-                    string query = "SELECT Id FROM UserTable WHERE Username = @Username";
-
-                    using (SqlCommand command = new SqlCommand(query,connection))
-                    {
-                        command.Parameters.AddWithValue("@Username", username);
-
-                        object result = command.ExecuteScalar();
-
-                        if(result != null && result != DBNull.Value)
-                        {
-                            id = Convert.ToInt32(result);
-                        }
-                    }
-                }
-            }catch (Exception ex)
-            {
-                Console.WriteLine($"Error getting user ID: {ex.Message}");
-            }
-
-            return id;
+            this.Close();
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -119,7 +87,7 @@ namespace Read_E_Books
             Form welcome = new welcomeForm();
             welcome.Show();
 
-            this.Hide();
+            this.Close();
         }
     }
 }

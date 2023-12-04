@@ -30,6 +30,19 @@
         {
             this.homeButton = new System.Windows.Forms.Button();
             this.welcomeLabel = new System.Windows.Forms.Label();
+            this.confirmPurchaseButton = new System.Windows.Forms.Button();
+            this.removeItemButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.totalCostLabel = new System.Windows.Forms.Label();
+            this.cartListBox = new System.Windows.Forms.ListBox();
+            this.paymentGroupBox = new System.Windows.Forms.GroupBox();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.cardLabel = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.cardTextBox = new System.Windows.Forms.TextBox();
+            this.paymentGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // homeButton
@@ -40,6 +53,7 @@
             this.homeButton.TabIndex = 4;
             this.homeButton.Text = "Home";
             this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // welcomeLabel
             // 
@@ -52,15 +66,132 @@
             this.welcomeLabel.TabIndex = 3;
             this.welcomeLabel.Text = "Welcome to Read-E-Books";
             // 
+            // confirmPurchaseButton
+            // 
+            this.confirmPurchaseButton.Location = new System.Drawing.Point(681, 410);
+            this.confirmPurchaseButton.Name = "confirmPurchaseButton";
+            this.confirmPurchaseButton.Size = new System.Drawing.Size(107, 28);
+            this.confirmPurchaseButton.TabIndex = 6;
+            this.confirmPurchaseButton.Text = "Confirm Purchase";
+            this.confirmPurchaseButton.UseVisualStyleBackColor = true;
+            this.confirmPurchaseButton.Click += new System.EventHandler(this.confirmPurchaseButton_Click);
+            // 
+            // removeItemButton
+            // 
+            this.removeItemButton.Location = new System.Drawing.Point(313, 410);
+            this.removeItemButton.Name = "removeItemButton";
+            this.removeItemButton.Size = new System.Drawing.Size(107, 28);
+            this.removeItemButton.TabIndex = 7;
+            this.removeItemButton.Text = "Remove Item";
+            this.removeItemButton.UseVisualStyleBackColor = true;
+            this.removeItemButton.Click += new System.EventHandler(this.removeItemButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(624, 352);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Total Cost:";
+            // 
+            // totalCostLabel
+            // 
+            this.totalCostLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.totalCostLabel.Location = new System.Drawing.Point(688, 342);
+            this.totalCostLabel.Name = "totalCostLabel";
+            this.totalCostLabel.Size = new System.Drawing.Size(100, 23);
+            this.totalCostLabel.TabIndex = 9;
+            // 
+            // cartListBox
+            // 
+            this.cartListBox.FormattingEnabled = true;
+            this.cartListBox.Location = new System.Drawing.Point(12, 70);
+            this.cartListBox.Name = "cartListBox";
+            this.cartListBox.ScrollAlwaysVisible = true;
+            this.cartListBox.Size = new System.Drawing.Size(295, 368);
+            this.cartListBox.TabIndex = 10;
+            // 
+            // paymentGroupBox
+            // 
+            this.paymentGroupBox.Controls.Add(this.cardTextBox);
+            this.paymentGroupBox.Controls.Add(this.addressTextBox);
+            this.paymentGroupBox.Controls.Add(this.nameTextBox);
+            this.paymentGroupBox.Controls.Add(this.cardLabel);
+            this.paymentGroupBox.Controls.Add(this.addressLabel);
+            this.paymentGroupBox.Controls.Add(this.nameLabel);
+            this.paymentGroupBox.Location = new System.Drawing.Point(451, 70);
+            this.paymentGroupBox.Name = "paymentGroupBox";
+            this.paymentGroupBox.Size = new System.Drawing.Size(337, 269);
+            this.paymentGroupBox.TabIndex = 11;
+            this.paymentGroupBox.TabStop = false;
+            this.paymentGroupBox.Text = "Payment Information";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(6, 39);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(41, 13);
+            this.nameLabel.TabIndex = 12;
+            this.nameLabel.Text = "Name :";
+            // 
+            // addressLabel
+            // 
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Location = new System.Drawing.Point(6, 72);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(81, 13);
+            this.addressLabel.TabIndex = 13;
+            this.addressLabel.Text = "Billing Address :";
+            // 
+            // cardLabel
+            // 
+            this.cardLabel.AutoSize = true;
+            this.cardLabel.Location = new System.Drawing.Point(6, 105);
+            this.cardLabel.Name = "cardLabel";
+            this.cardLabel.Size = new System.Drawing.Size(75, 13);
+            this.cardLabel.TabIndex = 14;
+            this.cardLabel.Text = "Card Number :";
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(95, 36);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(145, 20);
+            this.nameTextBox.TabIndex = 15;
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Location = new System.Drawing.Point(95, 65);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(145, 20);
+            this.addressTextBox.TabIndex = 16;
+            // 
+            // cardTextBox
+            // 
+            this.cardTextBox.Location = new System.Drawing.Point(95, 98);
+            this.cardTextBox.Name = "cardTextBox";
+            this.cardTextBox.Size = new System.Drawing.Size(145, 20);
+            this.cardTextBox.TabIndex = 17;
+            // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.paymentGroupBox);
+            this.Controls.Add(this.cartListBox);
+            this.Controls.Add(this.totalCostLabel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.removeItemButton);
+            this.Controls.Add(this.confirmPurchaseButton);
             this.Controls.Add(this.homeButton);
             this.Controls.Add(this.welcomeLabel);
             this.Name = "Cart";
             this.Text = "Cart";
+            this.paymentGroupBox.ResumeLayout(false);
+            this.paymentGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,5 +201,17 @@
 
         private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Label welcomeLabel;
+        private System.Windows.Forms.Button confirmPurchaseButton;
+        private System.Windows.Forms.Button removeItemButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label totalCostLabel;
+        private System.Windows.Forms.ListBox cartListBox;
+        private System.Windows.Forms.GroupBox paymentGroupBox;
+        private System.Windows.Forms.Label cardLabel;
+        private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.TextBox cardTextBox;
+        private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.TextBox nameTextBox;
     }
 }

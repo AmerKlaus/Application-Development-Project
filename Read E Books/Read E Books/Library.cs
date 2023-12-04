@@ -14,7 +14,7 @@ namespace Read_E_Books
     public partial class Library : Form
     {
         private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Amer-\\OneDrive\\Desktop\\Application-Development-Project\\Read E Books\\Read E Books\\EbookDatabase.mdf\";Integrated Security=True";
-        private int userId;
+        private int userId = GlobalVariables.CurrentId;
 
         public Library()
         {
@@ -24,7 +24,7 @@ namespace Read_E_Books
             LoadBooks();
         }
 
-        private void LoadBooks()
+        public void LoadBooks()
         {
             try
             {
@@ -32,10 +32,12 @@ namespace Read_E_Books
                 {
                     connection.Open();
 
-                    string query = "SELECT * FROM CartTable";
+                    string query = "SELECT * FROM Library WHERE userId = @UserId";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
+                        command.Parameters.AddWithValue("@UserId", userId);
+
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
@@ -55,20 +57,20 @@ namespace Read_E_Books
             Form home = new Home();
             home.Show();
 
-            this.Hide();
+            this.Close();
         }
 
         private void viewBookButton_Click(object sender, EventArgs e)
         {
             DataGridViewRow selectedRow = libraryBooksGridView.SelectedRows[0];
-            int selectedBookId = (int)selectedRow.Cells["BookId"].Value;
+            int selectedBookId = (int)selectedRow.Cells["bookId"].Value;
 
             GlobalVariables.CurrentBookId = selectedBookId;
 
             Form bookReader = new BookReader();
             bookReader.Show();
 
-            this.Hide();
+            this.Close();
         }
     }
 }

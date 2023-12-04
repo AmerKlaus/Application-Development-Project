@@ -56,7 +56,7 @@ namespace Read_E_Books
         {
             // Get the selected book from the DataGridView
             DataGridViewRow selectedRow = bookDataGridView.SelectedRows[0];
-            int selectedBookId = (int)selectedRow.Cells["BookId"].Value;
+            int selectedBookId = (int)selectedRow.Cells["bookId"].Value;
 
             string loggedInUsername = GlobalVariables.CurrentUsername;
             int userId = GetUserIdByUsername(loggedInUsername);
@@ -124,7 +124,7 @@ namespace Read_E_Books
             Form home = new Home();
             home.Show();
 
-            this.Hide();
+            this.Close();
         }
 
         private void cartButton_Click(object sender, EventArgs e)
@@ -132,7 +132,7 @@ namespace Read_E_Books
             Form cart = new Cart();
             cart.Show();
 
-            this.Hide();
+            this.Close();
         }
     }
 }

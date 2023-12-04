@@ -62,8 +62,8 @@ namespace Read_E_Books
 
 
                     string query = "SELECT b.bookName FROM BookTable b " +
-                                   "INNER JOIN Purchases p ON b.BookId = p.BookId " +
-                                   "INNER JOIN UserTable u ON p.UserId = u.UserId " +
+                                   "INNER JOIN Library l ON b.BookId = l.BookId " +
+                                   "INNER JOIN UserTable u ON l.UserId = u.UserId " +
                                    "WHERE u.Username = @Username";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
@@ -95,7 +95,7 @@ namespace Read_E_Books
             Form home = new Home();
             home.Show();
 
-            this.Hide();
+            this.Close();
         }
 
         private void changeUsernameButton_Click(object sender, EventArgs e)

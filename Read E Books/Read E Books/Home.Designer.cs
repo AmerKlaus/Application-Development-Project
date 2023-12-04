@@ -36,9 +36,10 @@
             // 
             // libraryButton
             // 
-            this.libraryButton.Location = new System.Drawing.Point(352, 131);
+            this.libraryButton.Location = new System.Drawing.Point(132, 55);
+            this.libraryButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.libraryButton.Name = "libraryButton";
-            this.libraryButton.Size = new System.Drawing.Size(403, 129);
+            this.libraryButton.Size = new System.Drawing.Size(151, 54);
             this.libraryButton.TabIndex = 0;
             this.libraryButton.Text = "My Library";
             this.libraryButton.UseVisualStyleBackColor = true;
@@ -46,9 +47,10 @@
             // 
             // shopButton
             // 
-            this.shopButton.Location = new System.Drawing.Point(352, 322);
+            this.shopButton.Location = new System.Drawing.Point(132, 135);
+            this.shopButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.shopButton.Name = "shopButton";
-            this.shopButton.Size = new System.Drawing.Size(403, 129);
+            this.shopButton.Size = new System.Drawing.Size(151, 54);
             this.shopButton.TabIndex = 1;
             this.shopButton.Text = "Bookstore";
             this.shopButton.UseVisualStyleBackColor = true;
@@ -56,9 +58,10 @@
             // 
             // settingsButton
             // 
-            this.settingsButton.Location = new System.Drawing.Point(469, 511);
+            this.settingsButton.Location = new System.Drawing.Point(132, 210);
+            this.settingsButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(140, 129);
+            this.settingsButton.Size = new System.Drawing.Size(151, 54);
             this.settingsButton.TabIndex = 2;
             this.settingsButton.Text = "Settings";
             this.settingsButton.UseVisualStyleBackColor = true;
@@ -66,9 +69,10 @@
             // 
             // logoutButton
             // 
-            this.logoutButton.Location = new System.Drawing.Point(990, 28);
+            this.logoutButton.Location = new System.Drawing.Point(371, 12);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(140, 129);
+            this.logoutButton.Size = new System.Drawing.Size(52, 54);
             this.logoutButton.TabIndex = 3;
             this.logoutButton.Text = "Logout";
             this.logoutButton.UseVisualStyleBackColor = true;
@@ -76,13 +80,14 @@
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 736);
+            this.ClientSize = new System.Drawing.Size(432, 309);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.shopButton);
             this.Controls.Add(this.libraryButton);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "Home";
             this.Text = "Home";
             this.ResumeLayout(false);

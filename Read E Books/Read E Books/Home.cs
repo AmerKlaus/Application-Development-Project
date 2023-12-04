@@ -22,7 +22,7 @@ namespace Read_E_Books
             Form library = new Library();
             library.Show();
 
-            this.Hide();
+            this.Close();
         }
 
         private void shopButton_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace Read_E_Books
             Form shop = new Shop();
             shop.Show();
 
-            this.Hide();
+            this.Close();
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace Read_E_Books
             Form welcome = new welcomeForm();
             welcome.Show();
 
-            this.Hide();
+            this.Close();
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace Read_E_Books
             Form settings = new Settings();
             settings.Show();
 
-            this.Hide();
+            this.Close();
         }
     }
 }
