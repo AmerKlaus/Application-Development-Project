@@ -64,9 +64,9 @@
             // loginButton
             // 
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.Location = new System.Drawing.Point(568, 281);
+            this.loginButton.Location = new System.Drawing.Point(551, 281);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(81, 33);
+            this.loginButton.Size = new System.Drawing.Size(98, 33);
             this.loginButton.TabIndex = 2;
             this.loginButton.Text = "Go to Login";
             this.loginButton.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             this.loginLabel.AutoSize = true;
             this.loginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginLabel.ForeColor = System.Drawing.Color.Green;
-            this.loginLabel.Location = new System.Drawing.Point(251, 286);
+            this.loginLabel.Location = new System.Drawing.Point(234, 286);
             this.loginLabel.Name = "loginLabel";
             this.loginLabel.Size = new System.Drawing.Size(311, 20);
             this.loginLabel.TabIndex = 9;

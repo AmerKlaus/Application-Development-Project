@@ -56,3 +56,23 @@ C:\Users\2205182\Desktop\Application-Development-Project\Read E Books\Read E Boo
 C:\Users\2205182\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.CoreCompileInputs.cache
 C:\Users\2205182\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.exe
 C:\Users\2205182\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.pdb
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\EbookDatabase.mdf
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\EbookDatabase_log.ldf
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\Read E Books.exe.config
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\Read E Books.exe
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\Read E Books.pdb
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.AssemblyReference.cache
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.SuggestedBindingRedirects.cache
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.BookReader.resources
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Cart.resources
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Home.resources
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Library.resources
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Login.resources
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Settings.resources
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Shop.resources
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.welcomeForm.resources
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Properties.Resources.resources
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.GenerateResource.cache
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.CoreCompileInputs.cache
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.exe
+C:\Users\2291894\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.pdb
