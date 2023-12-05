@@ -126,6 +126,7 @@
             this.accountTextBox.Location = new System.Drawing.Point(401, 36);
             this.accountTextBox.Multiline = true;
             this.accountTextBox.Name = "accountTextBox";
+            this.accountTextBox.ReadOnly = true;
             this.accountTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.accountTextBox.Size = new System.Drawing.Size(261, 297);
             this.accountTextBox.TabIndex = 17;
@@ -145,7 +146,7 @@
             this.Controls.Add(this.changePasswordButton);
             this.Controls.Add(this.changeUsernameButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.MaximizeBox = false;
             this.Name = "Settings";
             this.Text = "Settings";

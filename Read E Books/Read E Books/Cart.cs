@@ -74,7 +74,7 @@ namespace Read_E_Books
         private void UpdateTotalCostLabel()
         {
             double totalCost = cartItems.Sum(item => item.Price);
-            totalCostLabel.Text = $"Total Cost: ${totalCost.ToString("0.00")} (including tax)";
+            totalCostLabel.Text = $"Total Cost: ${totalCost.ToString("0.00")}";
         }
 
         private void homeButton_Click(object sender, EventArgs e)
