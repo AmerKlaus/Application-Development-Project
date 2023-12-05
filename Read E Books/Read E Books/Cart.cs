@@ -96,7 +96,9 @@ namespace Read_E_Books
 
         private void confirmPurchaseButton_Click(object sender, EventArgs e)
         {
-            if (nameTextBox.Text != null && addressTextBox.Text != null && cardTextBox.Text != null)
+            if (!string.IsNullOrWhiteSpace(nameTextBox.Text) &&
+                !string.IsNullOrWhiteSpace(addressTextBox.Text) &&
+                !string.IsNullOrWhiteSpace(cardTextBox.Text))
             {
                 try
                 {
@@ -147,7 +149,6 @@ namespace Read_E_Books
                             }
 
                             cartListBox.Items.Clear();
-                            DisplayCartItems();
 
                             // Clear the cart after adding items to the library
                             string clearCartQuery = "DELETE FROM Cart WHERE userId = @UserId";

@@ -60,19 +60,17 @@
             this.welcomeLabel.AutoSize = true;
             this.welcomeLabel.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeLabel.ForeColor = System.Drawing.Color.Green;
-            this.welcomeLabel.Location = new System.Drawing.Point(514, 58);
-            this.welcomeLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.welcomeLabel.Location = new System.Drawing.Point(193, 24);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(726, 74);
+            this.welcomeLabel.Size = new System.Drawing.Size(287, 30);
             this.welcomeLabel.TabIndex = 1;
             this.welcomeLabel.Text = "Read EBooks Bookstore";
             // 
             // homeButton
             // 
-            this.homeButton.Location = new System.Drawing.Point(32, 21);
-            this.homeButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.homeButton.Location = new System.Drawing.Point(12, 9);
             this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(200, 55);
+            this.homeButton.Size = new System.Drawing.Size(75, 23);
             this.homeButton.TabIndex = 2;
             this.homeButton.Text = "Home";
             this.homeButton.UseVisualStyleBackColor = true;
@@ -82,10 +80,9 @@
             // 
             this.listLabel.AutoSize = true;
             this.listLabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listLabel.Location = new System.Drawing.Point(32, 198);
-            this.listLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.listLabel.Location = new System.Drawing.Point(12, 83);
             this.listLabel.Name = "listLabel";
-            this.listLabel.Size = new System.Drawing.Size(209, 40);
+            this.listLabel.Size = new System.Drawing.Size(85, 16);
             this.listLabel.TabIndex = 6;
             this.listLabel.Text = "List of Books :";
             // 
@@ -104,21 +101,18 @@
             this.searchGroupBox.Controls.Add(this.searchGenreButton);
             this.searchGroupBox.Controls.Add(this.searchButton);
             this.searchGroupBox.Controls.Add(this.searchTextBox);
-            this.searchGroupBox.Location = new System.Drawing.Point(1135, 243);
-            this.searchGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.searchGroupBox.Location = new System.Drawing.Point(426, 102);
             this.searchGroupBox.Name = "searchGroupBox";
-            this.searchGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.searchGroupBox.Size = new System.Drawing.Size(553, 208);
+            this.searchGroupBox.Size = new System.Drawing.Size(207, 87);
             this.searchGroupBox.TabIndex = 8;
             this.searchGroupBox.TabStop = false;
             this.searchGroupBox.Text = "Search";
             // 
             // searchGenreButton
             // 
-            this.searchGenreButton.Location = new System.Drawing.Point(280, 97);
-            this.searchGenreButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.searchGenreButton.Location = new System.Drawing.Point(105, 41);
             this.searchGenreButton.Name = "searchGenreButton";
-            this.searchGenreButton.Size = new System.Drawing.Size(247, 75);
+            this.searchGenreButton.Size = new System.Drawing.Size(93, 40);
             this.searchGenreButton.TabIndex = 2;
             this.searchGenreButton.Text = "Search by Genre";
             this.searchGenreButton.UseVisualStyleBackColor = true;
@@ -126,10 +120,9 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(16, 97);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.searchButton.Location = new System.Drawing.Point(6, 41);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(247, 75);
+            this.searchButton.Size = new System.Drawing.Size(93, 40);
             this.searchButton.TabIndex = 1;
             this.searchButton.Text = "Search by Name";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -137,18 +130,16 @@
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(16, 45);
-            this.searchTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.searchTextBox.Location = new System.Drawing.Point(6, 19);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(511, 38);
+            this.searchTextBox.Size = new System.Drawing.Size(194, 20);
             this.searchTextBox.TabIndex = 0;
             // 
             // showAllButton
             // 
-            this.showAllButton.Location = new System.Drawing.Point(1276, 465);
-            this.showAllButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.showAllButton.Location = new System.Drawing.Point(478, 195);
             this.showAllButton.Name = "showAllButton";
-            this.showAllButton.Size = new System.Drawing.Size(247, 75);
+            this.showAllButton.Size = new System.Drawing.Size(93, 31);
             this.showAllButton.TabIndex = 2;
             this.showAllButton.Text = "Show All Books";
             this.showAllButton.UseVisualStyleBackColor = true;
@@ -158,10 +149,9 @@
             // 
             this.cartButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.cartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.1F);
-            this.cartButton.Location = new System.Drawing.Point(1135, 703);
-            this.cartButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.cartButton.Location = new System.Drawing.Point(426, 295);
             this.cartButton.Name = "cartButton";
-            this.cartButton.Size = new System.Drawing.Size(247, 75);
+            this.cartButton.Size = new System.Drawing.Size(126, 31);
             this.cartButton.TabIndex = 9;
             this.cartButton.Text = "Shopping Cart";
             this.cartButton.UseVisualStyleBackColor = false;
@@ -170,10 +160,9 @@
             // addCartButton
             // 
             this.addCartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.1F);
-            this.addCartButton.Location = new System.Drawing.Point(645, 703);
-            this.addCartButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.addCartButton.Location = new System.Drawing.Point(225, 295);
             this.addCartButton.Name = "addCartButton";
-            this.addCartButton.Size = new System.Drawing.Size(474, 75);
+            this.addCartButton.Size = new System.Drawing.Size(195, 31);
             this.addCartButton.TabIndex = 10;
             this.addCartButton.Text = "Add selected book to Cart";
             this.addCartButton.UseVisualStyleBackColor = true;
@@ -201,11 +190,10 @@
             this.numberOfPagesDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn});
             this.bookDataGridView.DataSource = this.bookBindingSource;
-            this.bookDataGridView.Location = new System.Drawing.Point(40, 243);
-            this.bookDataGridView.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.bookDataGridView.Location = new System.Drawing.Point(15, 102);
             this.bookDataGridView.Name = "bookDataGridView";
             this.bookDataGridView.RowHeadersWidth = 102;
-            this.bookDataGridView.Size = new System.Drawing.Size(1079, 433);
+            this.bookDataGridView.Size = new System.Drawing.Size(405, 182);
             this.bookDataGridView.TabIndex = 10;
             this.bookDataGridView.SelectionChanged += new System.EventHandler(this.bookDataGridView_SelectionChanged);
             // 
@@ -216,7 +204,7 @@
             this.bookIdDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.bookIdDataGridViewTextBoxColumn.Name = "bookIdDataGridViewTextBoxColumn";
             this.bookIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bookIdDataGridViewTextBoxColumn.Width = 153;
+            this.bookIdDataGridViewTextBoxColumn.Width = 65;
             // 
             // bookNameDataGridViewTextBoxColumn
             // 
@@ -224,7 +212,7 @@
             this.bookNameDataGridViewTextBoxColumn.HeaderText = "bookName";
             this.bookNameDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.bookNameDataGridViewTextBoxColumn.Name = "bookNameDataGridViewTextBoxColumn";
-            this.bookNameDataGridViewTextBoxColumn.Width = 205;
+            this.bookNameDataGridViewTextBoxColumn.Width = 84;
             // 
             // genreDataGridViewTextBoxColumn
             // 
@@ -232,7 +220,7 @@
             this.genreDataGridViewTextBoxColumn.HeaderText = "Genre";
             this.genreDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
-            this.genreDataGridViewTextBoxColumn.Width = 147;
+            this.genreDataGridViewTextBoxColumn.Width = 61;
             // 
             // numberOfPagesDataGridViewTextBoxColumn
             // 
@@ -240,7 +228,7 @@
             this.numberOfPagesDataGridViewTextBoxColumn.HeaderText = "numberOfPages";
             this.numberOfPagesDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.numberOfPagesDataGridViewTextBoxColumn.Name = "numberOfPagesDataGridViewTextBoxColumn";
-            this.numberOfPagesDataGridViewTextBoxColumn.Width = 275;
+            this.numberOfPagesDataGridViewTextBoxColumn.Width = 108;
             // 
             // priceDataGridViewTextBoxColumn
             // 
@@ -248,13 +236,13 @@
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.Width = 133;
+            this.priceDataGridViewTextBoxColumn.Width = 56;
             // 
             // Shop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1798, 822);
+            this.ClientSize = new System.Drawing.Size(674, 345);
             this.Controls.Add(this.bookDataGridView);
             this.Controls.Add(this.addCartButton);
             this.Controls.Add(this.cartButton);
@@ -263,7 +251,8 @@
             this.Controls.Add(this.listLabel);
             this.Controls.Add(this.homeButton);
             this.Controls.Add(this.welcomeLabel);
-            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Shop";
             this.Text = "Shop";
             this.Load += new System.EventHandler(this.Shop_Load);

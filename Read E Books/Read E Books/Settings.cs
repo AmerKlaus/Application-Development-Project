@@ -41,7 +41,7 @@ namespace Read_E_Books
                         if (reader.Read())
                         {
 
-                            accountLabel.Text = $"Account Information:\nUsername: {reader["Username"]}\nOrder History: {GetOrderHistory()}";
+                            accountTextBox.Text = $"Account Information:{Environment.NewLine}Username: {reader["Username"]}{Environment.NewLine}Order History:{Environment.NewLine}{GetOrderHistory()}";
                         }
                     }
                 }

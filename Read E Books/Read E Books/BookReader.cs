@@ -14,9 +14,6 @@ namespace Read_E_Books
 {
     public partial class BookReader : Form
     {
-        private string connectionString = GlobalVariables.Connection;
-        private string content;
-
         public string Content { get; set; }
 
         public BookReader()
