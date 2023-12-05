@@ -32,14 +32,16 @@
             this.shopButton = new System.Windows.Forms.Button();
             this.settingsButton = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.homeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // libraryButton
             // 
-            this.libraryButton.Location = new System.Drawing.Point(132, 55);
-            this.libraryButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.libraryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.1F);
+            this.libraryButton.Location = new System.Drawing.Point(471, 273);
+            this.libraryButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.libraryButton.Name = "libraryButton";
-            this.libraryButton.Size = new System.Drawing.Size(151, 54);
+            this.libraryButton.Size = new System.Drawing.Size(873, 129);
             this.libraryButton.TabIndex = 0;
             this.libraryButton.Text = "My Library";
             this.libraryButton.UseVisualStyleBackColor = true;
@@ -47,10 +49,11 @@
             // 
             // shopButton
             // 
-            this.shopButton.Location = new System.Drawing.Point(132, 135);
-            this.shopButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.shopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.1F);
+            this.shopButton.Location = new System.Drawing.Point(471, 464);
+            this.shopButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.shopButton.Name = "shopButton";
-            this.shopButton.Size = new System.Drawing.Size(151, 54);
+            this.shopButton.Size = new System.Drawing.Size(873, 129);
             this.shopButton.TabIndex = 1;
             this.shopButton.Text = "Bookstore";
             this.shopButton.UseVisualStyleBackColor = true;
@@ -58,10 +61,10 @@
             // 
             // settingsButton
             // 
-            this.settingsButton.Location = new System.Drawing.Point(132, 210);
-            this.settingsButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.settingsButton.Location = new System.Drawing.Point(1386, 11);
+            this.settingsButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(151, 54);
+            this.settingsButton.Size = new System.Drawing.Size(191, 89);
             this.settingsButton.TabIndex = 2;
             this.settingsButton.Text = "Settings";
             this.settingsButton.UseVisualStyleBackColor = true;
@@ -69,28 +72,42 @@
             // 
             // logoutButton
             // 
-            this.logoutButton.Location = new System.Drawing.Point(371, 12);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.logoutButton.Location = new System.Drawing.Point(1595, 11);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(52, 54);
+            this.logoutButton.Size = new System.Drawing.Size(191, 89);
             this.logoutButton.TabIndex = 3;
             this.logoutButton.Text = "Logout";
             this.logoutButton.UseVisualStyleBackColor = true;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
+            // homeLabel
+            // 
+            this.homeLabel.AutoSize = true;
+            this.homeLabel.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeLabel.ForeColor = System.Drawing.Color.Green;
+            this.homeLabel.Location = new System.Drawing.Point(812, 78);
+            this.homeLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.homeLabel.Name = "homeLabel";
+            this.homeLabel.Size = new System.Drawing.Size(199, 74);
+            this.homeLabel.TabIndex = 12;
+            this.homeLabel.Text = "Home";
+            // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 309);
+            this.ClientSize = new System.Drawing.Size(1798, 822);
+            this.Controls.Add(this.homeLabel);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.shopButton);
             this.Controls.Add(this.libraryButton);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Home";
             this.Text = "Home";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -100,5 +117,6 @@
         private System.Windows.Forms.Button shopButton;
         private System.Windows.Forms.Button settingsButton;
         private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Label homeLabel;
     }
 }

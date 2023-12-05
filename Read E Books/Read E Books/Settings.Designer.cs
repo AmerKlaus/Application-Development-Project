@@ -36,46 +36,56 @@
             this.changePasswordButton = new System.Windows.Forms.Button();
             this.changeUsernameButton = new System.Windows.Forms.Button();
             this.accountLabel = new System.Windows.Forms.Label();
+            this.settingsLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(110, 177);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.1F);
+            this.label2.Location = new System.Drawing.Point(434, 487);
+            this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(176, 39);
             this.label2.TabIndex = 15;
             this.label2.Text = "Password:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(110, 95);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.1F);
+            this.label1.Location = new System.Drawing.Point(434, 295);
+            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(183, 39);
             this.label1.TabIndex = 14;
             this.label1.Text = "Username:";
             // 
             // changeUsernameTextBox
             // 
-            this.changeUsernameTextBox.Location = new System.Drawing.Point(89, 124);
+            this.changeUsernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.1F);
+            this.changeUsernameTextBox.Location = new System.Drawing.Point(602, 289);
+            this.changeUsernameTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.changeUsernameTextBox.Name = "changeUsernameTextBox";
-            this.changeUsernameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.changeUsernameTextBox.Size = new System.Drawing.Size(418, 46);
             this.changeUsernameTextBox.TabIndex = 13;
             // 
             // changePasswordTextBox
             // 
-            this.changePasswordTextBox.Location = new System.Drawing.Point(89, 207);
+            this.changePasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.1F);
+            this.changePasswordTextBox.Location = new System.Drawing.Point(602, 487);
+            this.changePasswordTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.changePasswordTextBox.Name = "changePasswordTextBox";
-            this.changePasswordTextBox.Size = new System.Drawing.Size(100, 20);
+            this.changePasswordTextBox.Size = new System.Drawing.Size(418, 46);
             this.changePasswordTextBox.TabIndex = 12;
             this.changePasswordTextBox.UseSystemPasswordChar = true;
             // 
             // homeButton
             // 
-            this.homeButton.Location = new System.Drawing.Point(12, 12);
+            this.homeButton.Location = new System.Drawing.Point(32, 29);
+            this.homeButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(84, 23);
+            this.homeButton.Size = new System.Drawing.Size(224, 55);
             this.homeButton.TabIndex = 11;
             this.homeButton.Text = "Home Button";
             this.homeButton.UseVisualStyleBackColor = true;
@@ -83,37 +93,55 @@
             // 
             // changePasswordButton
             // 
-            this.changePasswordButton.Location = new System.Drawing.Point(161, 257);
+            this.changePasswordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.1F);
+            this.changePasswordButton.Location = new System.Drawing.Point(1034, 462);
+            this.changePasswordButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.changePasswordButton.Name = "changePasswordButton";
-            this.changePasswordButton.Size = new System.Drawing.Size(116, 23);
+            this.changePasswordButton.Size = new System.Drawing.Size(309, 95);
             this.changePasswordButton.TabIndex = 10;
-            this.changePasswordButton.Text = "Change Password";
+            this.changePasswordButton.Text = "Set as password";
             this.changePasswordButton.UseVisualStyleBackColor = true;
             this.changePasswordButton.Click += new System.EventHandler(this.changePasswordButton_Click);
             // 
             // changeUsernameButton
             // 
-            this.changeUsernameButton.Location = new System.Drawing.Point(15, 257);
+            this.changeUsernameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.1F);
+            this.changeUsernameButton.Location = new System.Drawing.Point(1036, 264);
+            this.changeUsernameButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.changeUsernameButton.Name = "changeUsernameButton";
-            this.changeUsernameButton.Size = new System.Drawing.Size(115, 23);
+            this.changeUsernameButton.Size = new System.Drawing.Size(307, 95);
             this.changeUsernameButton.TabIndex = 9;
-            this.changeUsernameButton.Text = "change Username\r\n";
+            this.changeUsernameButton.Text = "Set as username";
             this.changeUsernameButton.UseVisualStyleBackColor = true;
             this.changeUsernameButton.Click += new System.EventHandler(this.changeUsernameButton_Click);
             // 
             // accountLabel
             // 
-            this.accountLabel.Location = new System.Drawing.Point(305, 9);
+            this.accountLabel.Location = new System.Drawing.Point(1359, 38);
+            this.accountLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.accountLabel.Name = "accountLabel";
-            this.accountLabel.Size = new System.Drawing.Size(336, 368);
+            this.accountLabel.Size = new System.Drawing.Size(404, 743);
             this.accountLabel.TabIndex = 8;
             this.accountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // settingsLabel
+            // 
+            this.settingsLabel.AutoSize = true;
+            this.settingsLabel.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsLabel.ForeColor = System.Drawing.Color.Green;
+            this.settingsLabel.Location = new System.Drawing.Point(747, 64);
+            this.settingsLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.settingsLabel.Name = "settingsLabel";
+            this.settingsLabel.Size = new System.Drawing.Size(273, 74);
+            this.settingsLabel.TabIndex = 16;
+            this.settingsLabel.Text = "Settings";
+            // 
             // Settings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 386);
+            this.ClientSize = new System.Drawing.Size(1798, 822);
+            this.Controls.Add(this.settingsLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.changeUsernameTextBox);
@@ -122,7 +150,7 @@
             this.Controls.Add(this.changePasswordButton);
             this.Controls.Add(this.changeUsernameButton);
             this.Controls.Add(this.accountLabel);
-            this.Margin = new System.Windows.Forms.Padding(1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Settings";
             this.Text = "Settings";
             this.ResumeLayout(false);
@@ -140,5 +168,6 @@
         private System.Windows.Forms.Button changePasswordButton;
         private System.Windows.Forms.Button changeUsernameButton;
         private System.Windows.Forms.Label accountLabel;
+        private System.Windows.Forms.Label settingsLabel;
     }
 }

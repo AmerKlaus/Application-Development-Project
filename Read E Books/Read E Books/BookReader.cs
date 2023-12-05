@@ -17,6 +17,8 @@ namespace Read_E_Books
         private string connectionString = GlobalVariables.Connection;
         private string content;
 
+        public string Content { get; set; }
+
         public BookReader()
         {
             InitializeComponent();
@@ -25,7 +27,8 @@ namespace Read_E_Books
         public BookReader(string content)
         {
             InitializeComponent();
-            this.content = content;
+            Content = content;
+            bookContentTextBox.Text = Content;
         }
 
         private void libraryButton_Click(object sender, EventArgs e)
@@ -34,18 +37,6 @@ namespace Read_E_Books
             library.Show();
 
             this.Close();
-        }
-
-        private void BookReader_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                bookContentTextBox.Text = content;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading content: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
     }
 }

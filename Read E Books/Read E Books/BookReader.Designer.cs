@@ -36,9 +36,9 @@
             // 
             this.libraryButton.Location = new System.Drawing.Point(31, 27);
             this.libraryButton.Name = "libraryButton";
-            this.libraryButton.Size = new System.Drawing.Size(157, 74);
+            this.libraryButton.Size = new System.Drawing.Size(260, 74);
             this.libraryButton.TabIndex = 0;
-            this.libraryButton.Text = "Library";
+            this.libraryButton.Text = "< Back to Library";
             this.libraryButton.UseVisualStyleBackColor = true;
             this.libraryButton.Click += new System.EventHandler(this.libraryButton_Click);
             // 
@@ -48,19 +48,19 @@
             this.bookContentTextBox.Multiline = true;
             this.bookContentTextBox.Name = "bookContentTextBox";
             this.bookContentTextBox.ReadOnly = true;
-            this.bookContentTextBox.Size = new System.Drawing.Size(1208, 633);
+            this.bookContentTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.bookContentTextBox.Size = new System.Drawing.Size(790, 633);
             this.bookContentTextBox.TabIndex = 1;
             // 
             // BookReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1314, 814);
+            this.ClientSize = new System.Drawing.Size(867, 814);
             this.Controls.Add(this.bookContentTextBox);
             this.Controls.Add(this.libraryButton);
             this.Name = "BookReader";
             this.Text = "BookReader";
-            //this.Load += new System.EventHandler(this.BookReader_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

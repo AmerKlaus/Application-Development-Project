@@ -70,48 +70,44 @@ namespace Read_E_Books
         {
             if (libraryBooksGridView.SelectedRows.Count > 0)
             {
-                // Get the selected book's content from the Book table
                 DataGridViewRow selectedRow = libraryBooksGridView.SelectedRows[0];
-                int selectedBookId = (int)selectedRow.Cells["bookId"].Value;
 
-                string content = GetBookContent(selectedBookId);
+                int currentBookId = Convert.ToInt32(selectedRow.Cells["bookId"].Value.ToString());
 
-                // Open the BookReader form to display the content
+                string content = GetBookContent(currentBookId);
+
                 Form bookReader = new BookReader(content);
                 bookReader.Show();
-                this.Hide();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please select a row before clicking View.");
             }
         }
 
         private string GetBookContent(int bookId)
         {
-            try
+            string query = "SELECT Content FROM Book WHERE bookId = @BookId";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    connection.Open();
+                    command.Parameters.AddWithValue("@BookId", bookId);
 
-                    string query = "SELECT Content FROM Book WHERE bookId = @BookId";
+                    object result = command.ExecuteScalar();
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    if (result != null)
                     {
-                        command.Parameters.AddWithValue("@BookId", bookId);
-
-                        object result = command.ExecuteScalar();
-
-                        if (result != null && result != DBNull.Value)
-                        {
-                            return result.ToString();
-                        }
+                        return result.ToString();
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error getting book content: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
-            return null;
+            return string.Empty;
         }
 
         private void libraryBooksGridView_SelectionChanged(object sender, EventArgs e)
