@@ -17,6 +17,25 @@ D:\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Bo
 D:\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Cart.resources
 D:\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Home.resources
 D:\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Settings.resources
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\EbookDatabase.mdf
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\EbookDatabase_log.ldf
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\Read E Books.exe.config
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\Read E Books.exe
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\Read E Books.pdb
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.AssemblyReference.cache
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.BookReader.resources
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Cart.resources
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Home.resources
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Library.resources
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Login.resources
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Settings.resources
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Shop.resources
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.welcomeForm.resources
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Properties.Resources.resources
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.GenerateResource.cache
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.CoreCompileInputs.cache
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.exe
+C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.pdb
 C:\Users\2205182\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\EbookDatabase.mdf
 C:\Users\2205182\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\EbookDatabase_log.ldf
 C:\Users\2205182\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\Read E Books.exe.config
@@ -37,22 +56,3 @@ C:\Users\2205182\Desktop\Application-Development-Project\Read E Books\Read E Boo
 C:\Users\2205182\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.CoreCompileInputs.cache
 C:\Users\2205182\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.exe
 C:\Users\2205182\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.pdb
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\EbookDatabase.mdf
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\EbookDatabase_log.ldf
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\Read E Books.exe.config
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\Read E Books.exe
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\bin\Debug\Read E Books.pdb
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.AssemblyReference.cache
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.BookReader.resources
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Cart.resources
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Home.resources
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Library.resources
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Login.resources
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Settings.resources
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Shop.resources
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.welcomeForm.resources
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read_E_Books.Properties.Resources.resources
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.GenerateResource.cache
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.csproj.CoreCompileInputs.cache
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.exe
-C:\Users\Amer-\OneDrive\Desktop\Application-Development-Project\Read E Books\Read E Books\obj\Debug\Read E Books.pdb

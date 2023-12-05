@@ -89,8 +89,37 @@ namespace Read_E_Books
         {
             if (cartListBox.SelectedIndex != -1)
             {
-                cartItems.RemoveAt(cartListBox.SelectedIndex);
-                DisplayCartItems();
+                try
+                {
+                    // Get the selected book's name from the cartListBox
+                    string selectedBookName = cartItems[cartListBox.SelectedIndex].BookName;
+
+                    // Remove the item from the cartListBox
+                    cartItems.RemoveAt(cartListBox.SelectedIndex);
+                    DisplayCartItems();
+
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        // Remove the item from the Cart table
+                        string removeFromCartQuery = "DELETE FROM Cart WHERE userId = @UserId AND bookId IN (SELECT bookId FROM Book WHERE bookName = @BookName)";
+
+                        using (SqlCommand removeFromCartCommand = new SqlCommand(removeFromCartQuery, connection))
+                        {
+                            removeFromCartCommand.Parameters.AddWithValue("@UserId", userId);
+                            removeFromCartCommand.Parameters.AddWithValue("@BookName", selectedBookName);
+
+                            removeFromCartCommand.ExecuteNonQuery();
+                        }
+                    }
+
+                    MessageBox.Show("Item removed from the cart.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error removing item from cart: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
